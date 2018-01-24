@@ -124,3 +124,21 @@ The corresponding csv files are available at ``datasamples`` directory.
 $ python SparseCoupledDictionaryTraining.py --inputhigh datasamples/input_hr.csv --inputlow datasamples/input_lr.csv --dictsize 64 --imageN 100 --bands_h 25 --bands_l 9 --n_iter 100 --window 10
 ```
 After the termination of the loop the output of the algorithm is stored in variables `dict_h`, `dict_l` (dictionaries in high and low resolution) and `err_h`, `err_l` (RMSE in high and low resolution).
+
+## How to reference
+If you find any of this library useful for your research, please give credit in your publications where it is due.
+
+## Disclaimer
+Copyright (c) 2017-2018, Signal Processing Lab (SPL), Institute of Computer Science (ICS), FORTH, Greece.
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the Signal Processing Lab, the Institute of Computer Science and FORTH, nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THE SOFTWARE LIBRARIES AND DATASETS ARE PROVIDED BY THE INSTITUTE AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
