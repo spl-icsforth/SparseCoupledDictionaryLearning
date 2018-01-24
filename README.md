@@ -24,9 +24,9 @@ Contents
 This repository is designed for solving the problem of spectral super-resolution, adhering to a sparse-based machine learning technique. Our goal is to recover a high-spectral resolution multi- or hyperspectral image from only few spectral observations. The estimation of the high-spectral resolution scene is formulated as the joint estimation of the coupled pair of dictionaries, representing both the low and the high spectral resolution feature spaces, and the joint sparse coefficients. Specifically, we design a coupled dictionary learning (CDL) architecture, relying on the alternating direction method of multipliers (ADMM), which updates the dictionaries by closed form solutions. 
 Our CDL algorithm considers as input multiple training examples (i.e. hyper-pixels) extracted from corresponding low- and high- spectral resolution data-cubes, along with a few specification parameters, such as: 
 
-* ** The number of iterations in order to achieve high convergence rate;
-* ** The sparsity regularization parameter that balances the fidelity of the reconstruction;
-* ** The number of dictionary atoms, which denotes the coupled dictionaries size.
+* The number of iterations in order to achieve high convergence rate;
+* The sparsity regularization parameter that balances the fidelity of the reconstruction;
+* The number of dictionary atoms, which denotes the coupled dictionaries size.
 
 The output of our algorithm include the coupled dictionaries (i.e. high and low spectral resolution), along with the reconstruction errors (RMSE) for both the dictionaries and the augmented lagrangian function.
 
@@ -38,12 +38,12 @@ The output of our algorithm include the coupled dictionaries (i.e. high and low 
 
 In order to run the code in this repository the following packages must be installed:
 
-* **[Python](https://www.python.org/)</a>**
+* [Python](https://www.python.org/)</a>**
 [Tested with v 2.7.12]
 
-* **[Numpy](http://www.numpy.org/)** [Tested with v 1.14.0, v 1.13.3]
+* [Numpy](http://www.numpy.org/)** [Tested with v 1.14.0, v 1.13.3]
 
-* **[Scipy](http://www.scipy.org/)** [Tested with v 1.0.0]
+* [Scipy](http://www.scipy.org/)** [Tested with v 1.0.0]
 
 
 <a name="exe_anchor"></a>
@@ -69,26 +69,26 @@ Consult the csv files provided under the folder `data samples`.
 
 This library considers the following required input parameters:
 
-* ** '-ih', '--inputhigh': Input data file name (high resolution).
-* ** '-il', '--inputlow': Input data file name (low resolution).
-* ** '-d', '--dictsize': The number of atoms for the low and high resolution dictionaries
-* ** '-img', '--imageN': The size of the image (number of samples for input high and low resolution data cubes)
+* '-ih', '--inputhigh': Input data file name (high resolution).
+* '-il', '--inputlow': Input data file name (low resolution).
+* '-d', '--dictsize': The number of atoms for the low and high resolution dictionaries
+* '-img', '--imageN': The size of the image (number of samples for input high and low resolution data cubes)
 
 <a name="optional"></a>
 ### Optional input parameters
 This library considers the following optional input parameters:
 
-* ** '-n', '--n_iter': The number of iterations for calculating the dictionaries (Default value: 150)
-* ** '--window': The window for calculating the RMSE
-* ** '--bands_h': The number of bands in high resolution. Default value 25.
-* ** '--bands_l': The number of bands in low resolution. Default value 9.
-* ** '--c1': Step size parameter for the augmentend Lagrangian function. Default value 0.4.
-* ** '--c2': Step size parameter for the augmentend Lagrangian function. Default value 0.4.
-* ** '--c3': Step size parameter for the augmentend Lagrangian function. Default value 0.8.
-* ** '--maxbeta': Auxiliary parameter for updating Lagrange multiplier matrices. Default value 1e+6
-* ** '--delta': Regularization factor. Default value 1e-4
-* ** '--beta': Auxiliary parameter for updating Lagrange multiplier matrices. Default value 0.01
-* ** '--lamda': The threshold value. Default value 0.1
+* '-n', '--n_iter': The number of iterations for calculating the dictionaries (Default value: 150)
+* '--window': The window for calculating the RMSE
+* '--bands_h': The number of bands in high resolution. Default value 25.
+* '--bands_l': The number of bands in low resolution. Default value 9.
+* '--c1': Step size parameter for the augmentend Lagrangian function. Default value 0.4.
+* '--c2': Step size parameter for the augmentend Lagrangian function. Default value 0.4.
+* '--c3': Step size parameter for the augmentend Lagrangian function. Default value 0.8.
+* '--maxbeta': Auxiliary parameter for updating Lagrange multiplier matrices. Default value 1e+6
+* '--delta': Regularization factor. Default value 1e-4
+* '--beta': Auxiliary parameter for updating Lagrange multiplier matrices. Default value 0.01
+* '--lamda': The threshold value. Default value 0.1
 
 
 <a name="py_ex"></a>
@@ -102,14 +102,14 @@ $ python SparseCoupledDictionaryTraining.py --inputhigh INPUT_HR.csv --inputlow 
 
 Where:
 
-* ** `INPUT_HR.csv` is the csv file containing the data cubes in high resolution
-* ** `INPUT_LR.csv` is the csv file containing the data cubes in low resolution
-* ** `DICTSIZE` is the size (number of atoms) of the dictionaries that will be calculated
-* ** `IMG` is the size of the input data samples
-* ** `BANDS_H` is the number of bands in high resolution
-* ** `BANDS_L` is the number of bands in low resolution
-* ** `N` is the number of iterations for calculating the dictionaries
-* ** `W` is the window for calculating the RMSE
+* `INPUT_HR.csv` is the csv file containing the data cubes in high resolution
+* `INPUT_LR.csv` is the csv file containing the data cubes in low resolution
+* `DICTSIZE` is the size (number of atoms) of the dictionaries that will be calculated
+* `IMG` is the size of the input data samples
+* `BANDS_H` is the number of bands in high resolution
+* `BANDS_L` is the number of bands in low resolution
+* `N` is the number of iterations for calculating the dictionaries
+* `W` is the window for calculating the RMSE
 
 
 <a name="eg_anchor"></a>
@@ -121,6 +121,6 @@ The corresponding csv files are available at ``datasamples`` directory.
 
 
 ```bash
-$ python SparseCoupledDictionaryTraining.py --inputhigh datasamples/input_hr.csv --inputlow datasamples/input_lr.csv --DICTSIZE 64 --imageN 100 --bands_h 25 --bands_l 9 --n_iter 100 --window 10
+$ python SparseCoupledDictionaryTraining.py --inputhigh datasamples/input_hr.csv --inputlow datasamples/input_lr.csv --dictsize 64 --imageN 100 --bands_h 25 --bands_l 9 --n_iter 100 --window 10
 ```
 After the termination of the loop the output of the algorithm is stored in variables `dict_h`, `dict_l` (dictionaries in high and low resolution) and `err_h`, `err_l` (RMSE in high and low resolution).
