@@ -5,7 +5,11 @@ SRARSE COUPLED DICTIONARY LEARNING
 > Year: **2017-2018**   
 > Email: [kfot@ics.forth.gr](mailto:kfot@ics.forth.gr), [greg@ics.forth.gr](mailto:greg@ics.forth.gr)
 > Website: [https://github.com/spl-icsforth](https://github.com/spl-icsforth)  
-> Reference Documents: Konstantina  Fotiadou, Grigorios Tsagkatakis, Panagiotos Tsakalides, "Linear Inverse Problems with Sparsity Constraints," DEDALE DELIVERABLE 3.1, 2016.  
+> Reference Documents: 
+> [1] Konstantina  Fotiadou, Grigorios Tsagkatakis, Panagiotos Tsakalides, "Linear Inverse Problems with Sparsity Constraints," DEDALE DELIVERABLE 3.1, 2016.
+> [2]  K. Fotiadou , G. Tsagkatakis, Mahta Moghaddam, & P. Tsakalides. Recovery of Soil Moisture Active Passive (SMAP) instrument's active measurements via coupled dictionary learning. To appear in Computational Imaging Conference, of Electronic Imaging Symbosium. (Jan. 2018)
+> [3] K. Fotiadou , G. Tsagkatakis, B. Moraes, F.B. Abdalla, & P. Tsakalides (2017, August). Denoising galaxy spectra with coupled dictionary learning. In Signal Processing Conference (EUSIPCO), 2017 25th European (pp. 498-502). IEEE.
+> [4] K. Fotiadou, G. Tsagkatakis, P. Tsakalides. Spectral Resolution Enhancement via Coupled Dictionary Learning. Under Review in IEEE Transactions on Remote Sensing.
 
 Contents
 ------------
@@ -126,7 +130,7 @@ $ python SparseCoupledDictionaryTraining.py --inputhigh datasamples/input_hr.csv
 After the termination of the loop the output of the algorithm is stored in variables `dict_h`, `dict_l` (dictionaries in high and low resolution) and `err_h`, `err_l` (RMSE in high and low resolution).
 
 ## How to reference
-If you find any of this library useful for your research, please give credit in your publications where it is due.
+If you find any of this library useful for your research, please give credit in your publications where it is due. 
 
 ## Disclaimer
 Copyright (c) 2017-2018, Signal Processing Lab (SPL), Institute of Computer Science (ICS), FORTH, Greece.
